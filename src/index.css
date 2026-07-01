@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #050505;
+  --text-main: #f0f0f0;
+  --text-muted: #888888;
+  --accent: #4F46E5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Lenis recommended css */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Canvas Container */
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* Let clicks pass through to canvas if needed we can toggle this, but typically we want HTML clicks */
+}
+
+/* To allow orbit controls or 3D clicks, we can set pointer-events: auto on canvas, but we want html to be clickable too. 
+   Actually, standard is canvas behind, HTML in front with pointer-events: none on HTML containers, auto on buttons. */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HTML Scroll Container */
+.scroll-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw;
+  pointer-events: none; /* let clicks pass to 3D */
+}
+
+.section > * {
+  pointer-events: auto; /* make text/buttons clickable */
+}
+
+.title-display {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Typography styles */
+h1 {
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 600px;
+  color: var(--text-muted);
+}
+
+.hero-section {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-section {
+  align-items: flex-start;
+  padding-left: 10vw;
+}
+
+.skills-section {
+  align-items: flex-end;
+  padding-right: 10vw;
+  text-align: right;
+}
+
+.projects-section {
+  align-items: flex-start;
+  padding-left: 10vw;
+}
+
+.project-block {
+  margin-bottom: 4rem;
+}
+
+.project-block.flagship h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+}
+
+.project-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.project-stack {
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-top: 1rem;
+  font-family: monospace;
+}
+
+.timeline-section {
+  align-items: center;
+}
+
+.contact-section {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  background: rgba(79, 70, 229, 0.1);
+}
+
+/* Glassmorphism containers for heavy text */
+.glass-card {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 3rem;
+  pointer-events: auto;
+}
+
+/* Custom list styling */
+.elegant-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.elegant-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 800px;
+}
+
+.elegant-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Custom Scrollbar for inner overflowing sections */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.02);
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.5);
+  border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 70, 229, 0.8);
+}
+
+/* Download Resume Button */
+.resume-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.resume-btn:hover {
+  background: rgba(79, 70, 229, 0.6);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+}
