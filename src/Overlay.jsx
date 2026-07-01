@@ -31,7 +31,7 @@ const Overlay = () => {
       <section className="section hero-section" id="hero">
         <div className="fade-in-text glass-card">
           <h1 className="title-display">ANANT VARMA</h1>
-          <p className="title-display" style={{ fontSize: '1.2rem', letterSpacing: '0.15em', color: 'var(--accent)' }}>
+          <p className="title-display" style={{ fontSize: '1.2rem', letterSpacing: '0.15em', color: 'var(--accent)', textAlign: 'center', margin: '0 auto' }}>
             AI/ML Engineer | Multi-Agent Systems | Generative AI
           </p>
           <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
