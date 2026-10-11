@@ -7,12 +7,12 @@ const Overlay = () => {
     // Fade in text elements as they scroll into view
     const sections = gsap.utils.toArray('.fade-in-text');
     sections.forEach((section) => {
-      gsap.fromTo(section, 
+      gsap.fromTo(section,
         { opacity: 0, y: 50 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          duration: 1, 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: section,
@@ -35,8 +35,8 @@ const Overlay = () => {
             AI/ML Engineer | Multi-Agent Systems | Generative AI
           </p>
           <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-            <a href="https://github.com/Anantvarma11" target="_blank" rel="noopener noreferrer">github</a> &bull; 
-            <a href="https://www.linkedin.com/in/anant-varma-379a6b287/" target="_blank" rel="noopener noreferrer">linkedin</a> &bull; 
+            <a href="https://github.com/Anantvarma11" target="_blank" rel="noopener noreferrer">github</a> &bull;
+            <a href="https://www.linkedin.com/in/anant-varma-379a6b287/" target="_blank" rel="noopener noreferrer">linkedin</a> &bull;
             <a href="mailto:anantvarma.work@gmail.com">anantvarma.work@gmail.com</a>
           </div>
           <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
@@ -55,7 +55,7 @@ const Overlay = () => {
         <div className="fade-in-text glass-card" style={{ maxWidth: '700px' }}>
           <h2 className="title-display">Professional Summary</h2>
           <p>
-            Final year B.Tech Cybersecurity student with 8+ months of industry experience architecting multi-agent AI systems and LLM-powered platforms across two U.S. remote internships.
+            Final year B.Tech Cybersecurity student with 9+ months of industry experience architecting multi-agent AI systems and LLM-powered platforms across two U.S. remote internships.
           </p>
           <p>
             Co-inventor on 6 granted patents and registered designs (India & UK) across AI, IoT, and cybersecurity. Published an open-source Python security toolkit to PyPI. Seeking an AI/ML internship to apply hands-on skills in agentic workflows, RAG pipelines, and production-grade generative AI engineering.
@@ -105,18 +105,6 @@ const Overlay = () => {
         <div className="fade-in-text glass-card">
           <h2 className="title-display">Experience</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '800px' }}>
-            
-            <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>Founding AI Engineer Intern</h3>
-              <h4 style={{ color: 'var(--accent)', fontWeight: 'normal', marginBottom: '1rem' }}>Unimind &bull; Jun 2026 – Aug 2026 &bull; Remote</h4>
-              <ul className="elegant-list">
-                <li>Founding engineering team member contributing to the development of Arka, an AI-powered call fraud detection platform.</li>
-                <li>Building scalable backend services with Python, FastAPI, WebSockets, Redis, PostgreSQL, and Docker.</li>
-                <li>Developing AI pipelines using Gemini LLM, Llama, Groq Whisper STT, Sarvam, ElevenLabs TTS, and Qdrant.</li>
-                <li>Implementing fraud detection, intent analysis, semantic search, and risk scoring for real-time voice applications.</li>
-                <li>Collaborating closely with the founding team to design, build, and iterate on core product features.</li>
-              </ul>
-            </div>
 
             <div>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>AI/ML Engineer Intern</h3>
@@ -156,7 +144,7 @@ const Overlay = () => {
       <section className="section about-section" id="education" style={{ alignItems: 'flex-start', paddingLeft: '5vw' }}>
         <div className="fade-in-text glass-card" style={{ maxWidth: '800px' }}>
           <h2 className="title-display">Education & Publications</h2>
-          
+
           <div style={{ marginBottom: '2.5rem' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>B.Tech CSE — Cybersecurity Specialization</h3>
             <h4 style={{ color: 'var(--accent)', fontWeight: 'normal' }}>VIT Bhopal University &bull; 2023–2027</h4>
@@ -178,7 +166,7 @@ const Overlay = () => {
       <section className="section skills-section" id="hackathons" style={{ alignItems: 'flex-end', paddingRight: '5vw' }}>
         <div className="fade-in-text glass-card" style={{ maxWidth: '800px', textAlign: 'right' }}>
           <h2 className="title-display">Hackathons & Awards</h2>
-          
+
           <div style={{ marginBottom: '2.5rem' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>Johns Hopkins Health Hackathon</h3>
             <ul className="elegant-list" style={{ textAlign: 'left', direction: 'ltr', display: 'inline-block' }}>
@@ -220,7 +208,7 @@ const Overlay = () => {
       <section className="section projects-section" id="projects">
         <div className="fade-in-text glass-card">
           <h2 className="title-display" style={{ marginBottom: '2rem' }}>Key Projects</h2>
-          
+
           <div className="project-block flagship">
             <h3>Sentinel-X</h3>
             <p style={{ maxWidth: '800px', fontSize: '1.1rem', color: '#ccc' }}>
@@ -309,13 +297,13 @@ const Overlay = () => {
         <div className="fade-in-text glass-card">
           <h2 className="title-display">Patents & Intellectual Property</h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>Co-inventor on 2 granted patents (India) and 4 registered designs (UK & India):</p>
-          
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '800px', textAlign: 'right' }}>
             <div>
               <h4 style={{ color: '#fff', fontSize: '1.1rem' }}>An Intelligent Security-Aware 6G-Enabled IoT Architecture Using Machine Learning for Cloud-Based Smart Cities</h4>
               <div style={{ color: 'var(--accent)', fontSize: '0.8rem', marginBottom: '0.5rem' }}>Utility Patent (India) &bull; Published Mar 2026 (App No. 202631008090 A)</div>
             </div>
-            
+
             <div>
               <h4 style={{ color: '#fff', fontSize: '1.1rem' }}>AI-Based Sustainable Agriculture Models for Disease Prevention and Crop Resilience</h4>
               <div style={{ color: 'var(--accent)', fontSize: '0.8rem', marginBottom: '0.5rem' }}>Utility Patent (India) &bull; Published Feb 2026 (App No. 202641008089 A)</div>
