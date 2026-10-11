@@ -107,6 +107,18 @@ const Overlay = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '800px' }}>
 
             <div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>Founding AI Engineer Intern</h3>
+              <h4 style={{ color: 'var(--accent)', fontWeight: 'normal', marginBottom: '1rem' }}>Unimind &bull; Jun 2026 – Aug 2026 &bull; Remote</h4>
+              <ul className="elegant-list">
+                <li>Founding engineering team member contributing to the development of Arka, an AI-powered call fraud detection platform.</li>
+                <li>Building scalable backend services with Python, FastAPI, WebSockets, Redis, PostgreSQL, and Docker.</li>
+                <li>Developing AI pipelines using Gemini LLM, Llama, Groq Whisper STT, Sarvam, ElevenLabs TTS, and Qdrant.</li>
+                <li>Implementing fraud detection, intent analysis, semantic search, and risk scoring for real-time voice applications.</li>
+                <li>Collaborating closely with the founding team to design, build, and iterate on core product features.</li>
+              </ul>
+            </div>
+
+            <div>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>AI/ML Engineer Intern</h3>
               <h4 style={{ color: 'var(--accent)', fontWeight: 'normal', marginBottom: '1rem' }}>DataObserve &bull; Feb 2026 – Apr 2026 &bull; Houston, TX (Remote)</h4>
               <ul className="elegant-list">
